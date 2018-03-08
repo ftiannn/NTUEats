@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>NTUEats</title>
+<meta charset="utf-8">
+<style>
+
+body {font-family:Verdana, Arial, sans-serif;
+      background-color: #FFFFFF;
+}
+
+
+#wrapper { background-color: #FCFCFC; 
+           color: #000066;
+           width: 80%;
+		   margin: auto;
+           min-width:1000px;
+} 
+
+
+#rightcolumn { margin-left: 0px;
+               background-color: #FCFCFC;
+               color: #000000;
+} 
+
+header{ background-color: #FFFFFF;
+        color: #00005D; 
+        font-size: 150%; 
+        padding: 10px 0px 0px 0px;
+}
+
+h1 {font-family: Verdana, sans-serif; font-weight: bold; font-size: 1.5em; color: #000000; }
+h2 { text-align: right; font-size:70%;}
+h3 {font-family: Courier New, Monospace; font-weight: bold; font-size: 1.2em; color: #A58366; }
+
+
+
+.content {padding: 20px 20px 0 20px; height: 500px;
+} 
+
+footer {
+	font-size:70%; text-align: center;
+	left: 0; bottom:0; width: 100%; padding-top:500px;
+    background-color: #FCFCFC;
+}
+
+nav a {
+	text-decoration: none;
+	text-align: right;
+	color: #A58366;
+	font-weight: bold;
+}
+
+a:visited {
+	color: #DEB887
+}
+
+nav ul { list-style-type: none;}
+
+input[type=search] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=search]:focus {
+    width: 30%;
+}
+
+#div1 { position: absolute; margin-left:30px; top: 400px; font-size:0.9em; text-align: center;}
+#div1:hover { border: 1px solid #A58366 }
+
+#div2 { position: absolute; margin-left:670px; top: 400px;  font-size:0.9em;text-align: center; }
+#div2:hover { border: 1px solid #A58366 }
+
+#div3 { position: absolute; margin-left:30px; top: 800px;  font-size:0.9em;text-align: center; }
+#div3:hover { border: 1px solid #A58366 }
+
+#div4 { position: absolute; margin-left:670px; top: 800px;  font-size:0.9em;text-align: center; }
+#div4:hover { border: 1px solid #A58366 }
+
+
+</style> 
+</head>
+<body>
+
+<div id="wrapper">
+
+		<header>
+	<a href="home.html"><img src="Logo2.png" width="400" height="200" alt="Header"></a>
+	<h2>
+	<nav>
+	<a href="About.html">About</a>
+	<a href="FAQ.html">FAQ</a>
+	<a href="Contact.html">Contact</a>
+	<input type="search" id="mySearch" placeholder="Search..">
+	<a href="orderhistory.html">OrderHistory</a>
+    </nav>
+    </h2>
+</header>
+  
+    <div class="content"> 
+    <h1><center>CANTEEN 1</center></h1>
+    <h3>
+      <div id="div1">STORE 1: BAN MIAN STORE<br><a href="S1.html"><img src="Banmian.png" width="600" height="280" alt="S1"></a></div>
+      <div id="div2">STORE 2: NOODLE STORE<br><a href="S2.html"><img src="Noodle.png" width="600" height="280" alt="S2"></a></div>
+      <div id="div3">STORE 3: PORRIDGE STORE<br><a href="S3.html"><img src="Porridge.png" width="600" height="280" alt="S3"></a></div>
+      <div id="div4">STORE 4: WESTERN STORE<br><a href="S4.html"><img src="Western.png" width="600" height="280" alt="S4"></a></div>
+      </h3>
+      </div>
+<footer><br>
+<i>
+Copyright &copy; 2017 NTUEats<br>
+<a href="mailto:contact@ntueats.com">contact@ntueats.com</a>
+</i>
+</footer>
+
+</div>
+</body>
+</html>

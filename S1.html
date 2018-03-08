@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>NTUEats</title>
+<script type = "text/javascript" src = "cost.js"></script>
+<script type = "text/javascript" src = "Validation.js"></script>
+<meta charset="utf-8">
+<style>
+
+body {font-family:Verdana, Arial, sans-serif;
+      background-color: #FFFFFF;
+}
+
+
+#wrapper { background-color: #FCFCFC; 
+           color: #000066;
+           width: 80%;
+		   margin: auto;
+           min-width:1000px;
+} 
+
+
+#rightcolumn { margin-left: 0px;
+               background-color: #FCFCFC;
+               color: #000000;
+} 
+
+header{ background-color: #FFFFFF;
+        color: #00005D; 
+        font-size: 150%; 
+        padding: 10px 0px 0px 0px;
+}
+
+h1 {font-family: Verdana, sans-serif; font-weight: bold; font-size: 1.5em; color: #000000; }
+h2 { text-align: right; font-size:70%;}
+h3 {font-family: Courier New, Monospace; font-weight: bold; font-size: 1.2em; color: #A58366; }
+
+
+
+.content {padding: 20px 20px 0 20px; height: 500px;
+} 
+
+footer {
+	font-size:70%; text-align: center;
+	left: 0; bottom:0; width: 100%; margin-top: 1000px;
+    background-color: #FCFCFC;
+}
+
+nav a {
+	text-decoration: none;
+	text-align: right;
+	color: #A58366;
+	font-weight: bold;
+}
+
+a:visited {
+	color: #DEB887
+}
+
+nav ul { list-style-type: none;}
+
+input[type=search] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=search]:focus {
+    width: 30%;
+}
+
+p {	color: #000000; 
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 1.0em;
+}
+
+table { margin: auto; margin-left: 350px;  font-size:0.9em;}
+th { padding: 20px; font-family: Verdana, sans-serif; border-style: none; text-align: center; }
+td { padding: 10px 20px 10px 10px; font-family: Verdana, sans-serif; border-style: none; text-align: center;}
+tr:nth-of-type(even) { background-color: #F5F5DC;}
+tr:nth-of-type(odd) { background-color: #DEB887;}
+
+
+#div1 { position: absolute; margin-left:30px; top: 400px; font-size:0.9em; text-align: center;}
+#div1:hover { border: 1px solid #A58366 }
+
+#div2 { position: absolute; margin-left:350px; top: 400px;  font-size:0.9em;text-align: center; }
+#div2:hover { border: 1px solid #A58366 }
+
+
+</style> 
+</head>
+<body>
+<script>
+function fnsearch() {
+	document.forms[0].submit();
+}
+</script>
+
+
+<div id="wrapper">
+
+		<header>
+	<a href="home.html"><img src="Logo2.png" width="400" height="200" alt="Header"></a>
+	<h2>
+	<nav>
+	<a href="About.html">About</a>
+	<a href="FAQ.html">FAQ</a>
+	<a href="Contact.html">Contact</a>
+	<a href="orderhistory.html">OrderHistory</a>
+	<form action="search.php" method = "POST"><input type="search" name="mySearch" placeholder="Search.." onKeydown="Javascript: if (event.keyCode==13) fnsearch();"></form>
+    </nav>
+    </h2>
+</header>
+    <div class="content"> 
+    <h1><center>BAN MIAN STORE</h1>
+    <div class = "div1">
+    <form action="processorder.php" method="POST" id="form" name="form">
+    <table border="0">
+    <tr>
+    <th> Product </th>
+    <th> Price </th>
+    <th> Qty </th>
+    <th> Total Cost</th>
+
+    </tr>
+    
+    <tr>
+    <td>Original Taste Ban Mian</td>
+    <td>$4.00</td>
+    <th><input type = "text" id = "originalqty" name = "originalqty" size = "2" pattern="[0-9]" /></th>
+    <td>S$ <input type="text" size = "5" id = "original" onfocus = "this.blur();"></td>
+    </tr>
+    
+    <tr>
+    <td>Pork Belly Ban Mian</td>
+    <td>$4.00</td>
+    <th><input type = "text" id = "porkqty" name = "porkqty" size = "2" pattern="[0-9]"/></th>
+    <td>S$ <input type="text" size = "5" id = "pork" onfocus = "this.blur();"></td>
+    </tr>
+    
+    <tr>
+    <td>Fresh Prawn Ban Mian</td>
+    <td>$4.00</td>
+    <th><input type = "text" id = "prawnqty" name = "prawnqty" size = "2" pattern="[0-9]"/></th>    
+    <td>S$ <input type="text" size = "5" id="prawn" onfocus = "this.blur();"> </td>
+
+
+    </tr>
+    
+    <tr>
+    <td>Tom Yam Ban Mian</td>
+    <td>$4.00</td>
+    <th><input type = "text" id = "tomyamqty" name = "tomyamqty" size = "2" pattern="[0-9]"/></th>
+    <td>S$ <input type = "text" size = "5" id = "tomyam" onfocus = "this.blur();"></td>
+    </tr>
+    
+    <tr>
+    <td style="background-color: #FFFFFF"></td>
+    <td style="background-color: #FFFFFF"></td>
+    <td style="background-color: #FFFFFF"><strong>SUB-TOTAL:</strong></td>
+    <td style="background-color: #FFFFFF">S$<input type = "text"  size = "5"  id = "cost" 
+               onfocus = "this.blur();" /></td>
+    <td style="background-color: #FFFFFF"><input type = "button"  value = "Total Cost" 
+               onclick = "computeCost();" /></td>
+    </tr>
+    </table>
+    </center>
+   
+    <h1>Personal Detail</h1>
+    <p>Please fill out your personal detail with the form below.<br>
+    Required fields are marked with an asterisk *</p>
+
+      <label>*First Name: </label><input type="text" name="fname" id="fname" required><br>
+      <label>*Last Name: </label><input type="text" name="lname" id="lname" required><br>
+      <label>*E-mail: </label><input type="email" name="email" id= "email" required><br>
+      <label>*Contact No: </label><input type="text" name="contact" id="contact" required><br>
+      <label>*Address: </label><textarea name="address" id="address" rows="3" cols="30" required></textarea><br>
+<!-- The submit and reset buttons -->
+
+      <p>
+    <input type="submit" value = "Submit Order" style="float: right; margin-right: 54px;" />
+    <input type = "reset"  value = "Clear Order Form" style="float: right; margin-right: 20px;" />
+      </p>
+      <br>
+      <br>
+</h3>
+
+    </form></div>
+    <h3>
+
+      </h3>
+      </div>
+<footer><br>
+<i>
+Copyright &copy; 2017 NTUEats<br>
+<a href="mailto:contact@ntueats.com">contact@ntueats.com</a>
+</i>
+</footer>
+
+</div>
+</body>
+</html>
